@@ -11,14 +11,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function main() {
-  console.log(chalk.cyan.bold('\n🤖 GeminiSearch CLI - Google Gemini AI with Search Grounding\n'));
+  console.log(chalk.cyan.bold('\nGeminiSearch CLI - Google Gemini AI with Search Grounding\n'));
 
   try {
     // Check if API key exists in environment
     let apiKey = process.env.GOOGLE_GENAI_API_KEY;
 
     if (!apiKey) {
-      console.log(chalk.yellow('⚠️  No API key found in environment variables.'));
+      console.log(chalk.yellow('WARNING: No API key found in environment variables.'));
 
       // Try to load from .env file
       const envPath = path.join(process.cwd(), '.env');
@@ -52,7 +52,7 @@ async function main() {
         ]);
         apiKey = enteredKey;
       } else {
-        console.log(chalk.red('❌ No API key provided. Exiting.'));
+        console.log(chalk.red('ERROR: No API key provided. Exiting.'));
         process.exit(1);
       }
     }
@@ -77,7 +77,7 @@ async function main() {
       }
     ]);
 
-    console.log(chalk.green('\n✅ Ready to answer your questions!'));
+    console.log(chalk.green('\nREADY: Ready to answer your questions!'));
     console.log(chalk.gray('Type your question and press Enter. Type "exit" or "quit" to leave.\n'));
 
     while (true) {
@@ -85,7 +85,7 @@ async function main() {
         {
           type: 'input',
           name: 'question',
-          message: chalk.blue('💭 Your question:'),
+          message: chalk.blue('Your question:'),
           validate: (input) => {
             if (!input.trim()) {
               return 'Please enter a question.';
@@ -96,7 +96,7 @@ async function main() {
       ]);
 
       if (question.toLowerCase() === 'exit' || question.toLowerCase() === 'quit') {
-        console.log(chalk.green('\n👋 Goodbye!'));
+        console.log(chalk.green('\nGoodbye!'));
         break;
       }
 
@@ -104,7 +104,7 @@ async function main() {
     }
 
   } catch (error) {
-    console.error(chalk.red('\n❌ Error:'), error.message);
+    console.error(chalk.red('\nERROR:'), error.message);
     process.exit(1);
   }
 }
