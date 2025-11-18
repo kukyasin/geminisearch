@@ -13,16 +13,42 @@ A powerful command-line interface for Google Gemini AI with Google Search ground
 
 ## Installation
 
-### Global Installation (Recommended)
+#### Option 1: Global Installation (Recommended)
 
 ```bash
-npm install -g geminisearch
+npm install -g geminisearch-cli
+geminisearch
 ```
 
-### Local Installation
+**If you get "command not found" error after global installation:**
+
+1. **Add npm global bin to PATH** (one-time setup):
+   ```bash
+   # For macOS/Linux
+   echo 'export PATH="$PATH:$(npm config get prefix)/bin"' >> ~/.zshrc
+   # or for bash:
+   echo 'export PATH="$PATH:$(npm config get prefix)/bin"' >> ~/.bashrc
+
+   # Then restart your terminal or run:
+   source ~/.zshrc
+   ```
+
+2. **Or use npx instead** (no PATH setup needed):
+   ```bash
+   npx geminisearch-cli
+   ```
+
+#### Option 2: Direct Run (No Installation)
 
 ```bash
-npm install geminisearch
+npx geminisearch-cli
+```
+
+#### Option 3: Local Installation
+
+```bash
+npm install geminisearch-cli
+npx geminisearch-cli
 ```
 
 ## Getting Started
@@ -162,6 +188,41 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## Troubleshooting
+
+### "Command Not Found" Error
+
+If you get `command not found: geminisearch` after global installation:
+
+1. **Quick Fix - Use npx** (recommended):
+   ```bash
+   npx geminisearch-cli
+   ```
+
+2. **Permanent Fix - Update PATH**:
+   ```bash
+   # Check your npm global bin directory
+   npm config get prefix
+
+   # Add it to your shell profile (one-time setup)
+   echo 'export PATH="$PATH:$(npm config get prefix)/bin"' >> ~/.zshrc  # macOS
+   echo 'export PATH="$PATH:$(npm config get prefix)/bin"' >> ~/.bashrc  # Linux
+
+   # Restart terminal or run:
+   source ~/.zshrc  # or source ~/.bashrc
+   ```
+
+3. **Verify Installation**:
+   ```bash
+   npm list -g geminisearch-cli
+   ```
+
+### Other Issues
+
+- **Node.js Version**: Ensure you have Node.js 14.0.0 or higher
+- **Permission Error**: Try `sudo npm install -g geminisearch-cli` (last resort)
+- **Network Issues**: Check your internet connection and npm registry
 
 ## License
 

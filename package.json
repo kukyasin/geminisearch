@@ -1,5 +1,5 @@
 {
-  "name": "geminisearch",
+  "name": "geminisearch-cli",
   "version": "1.0.0",
   "description": "A CLI tool for Google Gemini AI with Google Search grounding capabilities",
   "main": "lib/index.js",
