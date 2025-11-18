@@ -20,15 +20,15 @@ npm install -g geminisearch-cli
 geminisearch
 ```
 
-**✨ The installation now automatically sets up your PATH!**
+**The installation now automatically sets up your PATH!**
 
 After installation, you'll see a message like:
 ```
-🔧 GeminiSearch CLI - Setting up PATH...
-📁 npm global bin: /Users/yourname/.npm-global/bin
-✅ Added to /Users/yourname/.zshrc
-🎉 PATH setup completed!
-💡 Please restart your terminal or run: source ~/.zshrc
+GeminiSearch CLI - Setting up PATH...
+npm global bin: /Users/yourname/.npm-global/bin
+SUCCESS: Added to /Users/yourname/.zshrc
+SUCCESS: PATH setup completed!
+Please restart your terminal or run: source ~/.zshrc
 ```
 
 Just restart your terminal and run:
