@@ -22,13 +22,15 @@
     "cli",
     "search",
     "gemini-ai",
-    "google-ai"
+    "google-ai",
+    "npm",
+    "package"
   ],
   "author": "Yasin Kuk <yasin7kuk@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kukyasin/geminisearch.git"
+    "url": "git+https://github.com/kukyasin/geminisearch.git"
   },
   "bugs": {
     "url": "https://github.com/kukyasin/geminisearch/issues"
