@@ -13,32 +13,30 @@ A powerful command-line interface for Google Gemini AI with Google Search ground
 
 ## Installation
 
-#### Option 1: Global Installation (Recommended)
+#### Option 1: Global Installation (Recommended) - Auto PATH Setup
 
 ```bash
 npm install -g geminisearch-cli
 geminisearch
 ```
 
-**If you get "command not found" error after global installation:**
+**✨ The installation now automatically sets up your PATH!**
 
-1. **Add npm global bin to PATH** (one-time setup):
-   ```bash
-   # For macOS/Linux
-   echo 'export PATH="$PATH:$(npm config get prefix)/bin"' >> ~/.zshrc
-   # or for bash:
-   echo 'export PATH="$PATH:$(npm config get prefix)/bin"' >> ~/.bashrc
+After installation, you'll see a message like:
+```
+🔧 GeminiSearch CLI - Setting up PATH...
+📁 npm global bin: /Users/yourname/.npm-global/bin
+✅ Added to /Users/yourname/.zshrc
+🎉 PATH setup completed!
+💡 Please restart your terminal or run: source ~/.zshrc
+```
 
-   # Then restart your terminal or run:
-   source ~/.zshrc
-   ```
+Just restart your terminal and run:
+```bash
+geminisearch
+```
 
-2. **Or use npx instead** (no PATH setup needed):
-   ```bash
-   npx geminisearch-cli
-   ```
-
-#### Option 2: Direct Run (No Installation)
+#### Option 2: Direct Run (No Installation - No PATH Setup Needed)
 
 ```bash
 npx geminisearch-cli

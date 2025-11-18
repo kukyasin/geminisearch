@@ -11,7 +11,8 @@
     "start": "node bin/geminisearch.js",
     "build": "echo 'No build step required for JS'",
     "test": "echo 'No tests specified yet'",
-    "prepare": "echo 'Prepare script'"
+    "prepare": "echo 'Prepare script'",
+    "postinstall": "node scripts/setup-path.js"
   },
   "keywords": [
     "gemini",
@@ -46,6 +47,7 @@
   "files": [
     "bin/",
     "lib/",
+    "scripts/",
     "README.md",
     "LICENSE"
   ]
